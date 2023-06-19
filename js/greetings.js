@@ -22,7 +22,7 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `Hello ${username} !`;
+    greeting.innerText = `Hello! ${username} !`;
     
     loginForm.classList.remove(LOGIN_FORM);
     greeting.classList.remove(HIDDEN_CLASSNAME);
