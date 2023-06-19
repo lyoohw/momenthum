@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border;
+    margin: 0;
+}
+
+body{
+    color: #ffff;
+    font-family: 'Pretendard-Regular';
+}
+
+/*리셋 css  */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea{
+    font-family: 'Pretendard-Regular';
+    font-size: 16px;
+    border: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active{
+    outline: none;
+    box-shadow: none;
+}
+
+ul,
+ol,
+li{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.loginForm{
+    display: flex;
+}
+
+.lgInputBox{
+    width: 250px;
+    height: 35px;
+    color: #ffff;
+    background-color: transparent;
+    border: 1px solid #ffff;
+    border-radius: 20px 0 0 20px;
+    padding-left: 15px;
+}
+
+.lgInputBox::placeholder{
+    color: #dddddd;
+}
+
+.sbButton{
+    width: 75px;
+    height: 39px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.sbButton:hover{
+    background-color: cornflowerblue;
+    color: #ffff;
+    margin-left: 15px;
+}
+
+.inputBox{
+    width: 500px;
+    height: 35px;
+    color: #ffff;
+    background-color: transparent;
+    border-bottom: 1px solid #ffff;
+    padding-left: 10px;
+}
+
+.inputBox::placeholder{
+    color: #dddddd;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgImg{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadein 0.5s linear;
+}
+
+.clockTitle{
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+
+.greetingText{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.todoList{
+    margin-top: 20px;
+    width: 480px;
+    height: 200px;
+    overflow: auto;
+}
+
+.todoList::-webkit-scrollbar{
+    width: 10px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.todoList::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 10px;
+    background-color: #dddddd;
+    border-radius: 5px;
+}
+
+.todoList li{
+    transition: 0.2s ease-in;
+}
+
+.todoListLi{
+    width: 400px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.todoList li input{
+    margin-right: 10px;
+}
+
+.todoList li span{
+    margin-right: 15px;
+    transition: 0.3s ease-in;
+}
+
+.todoList li button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.checked{
+    width: 400px;
+    height: 40px;
+    background-color: rgba(65, 65, 65, 0.5);
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.checkedText{
+    text-decoration: line-through;
+}
+
+.quoteText{
+    position: absolute;
+    bottom: 30px;
+}
+
+.quoteText span:first-child{
+    margin-right: 10px;
+}
+
+.quoteText span:last-child::before{
+    content: "- ";
+}
+
+.quoteText span:last-child::after{
+    content: " -";
+}
+
+aside{
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside span:nth-child(1){
+    margin-bottom: 5px;
+}
+
+aside span:nth-child(2){
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px){
+    .clockTitle{
+        font-size: 120px;
+    }
+}
